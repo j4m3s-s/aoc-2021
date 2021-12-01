@@ -18,6 +18,7 @@
         gnumake
         python3
         gtest
+        hyperfine
       ];
     };
   };
