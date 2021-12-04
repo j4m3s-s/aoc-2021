@@ -13,12 +13,15 @@
   {
 
     devShell.${system} = pkgs.mkShell {
+      hardeningDisable = [ "all" ];
       buildInputs = with pkgs; [
-        gcc
+        gcc-unwrapped
         gnumake
         python3
         gtest
         hyperfine
+        gdb
+        rr
       ];
     };
   };
