@@ -8,8 +8,6 @@ using std::vector;
 #include <string>
 using std::string;
 
-#include <gmpxx.h>
-
 void print_lanternfish(size_t *arr) {
 	for (int i = 0; i < 9; i++) {
 		cout << arr[i] << ',';
@@ -19,7 +17,7 @@ void print_lanternfish(size_t *arr) {
 
 int main(void) {
 
-	mpz_class lantern_count[9];
+	size_t lantern_count[9];
 	for (int i = 0; i < 9; i++) {
 		lantern_count[i] = 0;
 	}
@@ -32,7 +30,7 @@ int main(void) {
 	const int TOTAL_DAY = 256;
 	for (int day_count = 0; day_count < TOTAL_DAY; day_count++) {
 		//print_lanternfish(lantern_count);
-		mpz_class new_lantern = lantern_count[0];
+		size_t new_lantern = lantern_count[0];
 		for (int i = 0; i < 8; i++) {
 			lantern_count[i] = lantern_count[i + 1];
 		}
@@ -40,7 +38,7 @@ int main(void) {
 		lantern_count[6] += new_lantern;
 	}
 
-	mpz_class sum = 0;
+	size_t sum = 0;
 	for (int i = 0; i < 9; i++) {
 		sum += lantern_count[i];
 	}
