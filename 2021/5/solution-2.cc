@@ -175,15 +175,15 @@ int main(void) {
 	cout << "Overlapping points " << overlapping_points << '\n';
 
 // print array
-for (int j = 0; j < ARR_HEIGHT; j++) {
-	for (int i = 0; i < ARR_WIDTH; i++) {
-		if (arr[i + ARR_WIDTH * j] == 0)
-			cout << '.';
-		else
-			cout << arr[i + ARR_WIDTH * j];
-	}
-	cout << '\n';
-}
+//for (int j = 0; j < ARR_HEIGHT; j++) {
+//	for (int i = 0; i < ARR_WIDTH; i++) {
+//		if (arr[i + ARR_WIDTH * j] == 0)
+//			cout << '.';
+//		else
+//			cout << arr[i + ARR_WIDTH * j];
+//	}
+//	cout << '\n';
+//}
 
 
 	delete[] arr;
