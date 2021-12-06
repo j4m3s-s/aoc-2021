@@ -22,6 +22,7 @@
         hyperfine
         gdb
         rr
+        gmpxx
       ];
     };
   };
